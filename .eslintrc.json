@@ -24,10 +24,16 @@
         "react-hooks"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "global-require": "off",
-        "import/prefer-default-export": "off"
+      "import/no-extraneous-dependencies": [
+        "error", {
+          "devDependencies": true
+        }
+      ],
+      "react/jsx-props-no-spreading": [0],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "global-require": "off",
+      "import/prefer-default-export": "off"
     }
 }
