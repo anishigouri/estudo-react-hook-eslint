@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import LoginForm from './pages/Login/LoginForm';
+import UserForm from './pages/User/UserForm';
 import LoginRoute from './templates/login/Body/Body';
 
 export default function Routes() {
@@ -13,6 +14,7 @@ export default function Routes() {
     <Router>
       <Switch>
         <LoginRoute exact path="/login" component={LoginForm} />
+        <LoginRoute exact path="/user" component={UserForm} />
       </Switch>
     </Router>
   );
