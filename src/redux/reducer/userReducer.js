@@ -1,23 +1,25 @@
 import callApi from '../../services/gitHubAPI';
 
-const initialState = [];
+const initialState = {
+  data: {},
+};
 
 const types = {
   get: 'GET_USER',
 };
 
-export default function userReducer(state = {}, action) {
+export default function userReducer(state = initialState, action) {
   switch (action.type) {
     case types.get:
       return { ...state, data: action.payload };
     default:
-      return { ...state };
+      return initialState;
   }
 }
 
 export const getUserAction = () => async (dispatch) => {
   try {
-    const res = await callApi();
+    const res = await callApi('users/anishigouri');
     dispatch({
       type: types.get,
       payload: res.data,
